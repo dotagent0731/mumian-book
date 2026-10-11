@@ -1,0 +1,19 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor and temporary files
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

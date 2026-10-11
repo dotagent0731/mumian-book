@@ -1,0 +1,102 @@
+{
+  "schema_version": "image-spec-v2",
+  "asset_id": "b4a63e2d-d9f0-48e5-ba3f-a2c776cd7821",
+  "category": "portrait",
+  "classification_confidence": 0.9,
+  "processing_status": "completed",
+  "description": "深色头发向后束起，穿深灰色高领绗缝外套，画面为正面上半身近景，可见斜跨胸前的带状物。下半身未入镜，束发使头发全长无法判断；图像较模糊，细节有限。",
+  "description_en": "Dark hair is pulled back. A dark gray, high-collared quilted jacket and a band running diagonally across the chest are visible in a frontal upper-body close-up. The lower body is outside the frame, the full hair length cannot be determined, and blur limits detail.",
+  "original_attachment": null,
+  "subject_id_scope": "asset_local",
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "description": "深色头发向后束起，穿深灰色高领绗缝外套，画面为正面上半身近景，可见斜跨胸前的带状物。下半身未入镜，束发使头发全长无法判断；图像较模糊，细节有限。",
+      "description_en": "Dark hair is pulled back. A dark gray, high-collared quilted jacket and a band running diagonally across the chest are visible in a frontal upper-body close-up. The lower body is outside the frame, the full hair length cannot be determined, and blur limits detail.",
+      "appearance_attributes": {
+        "hair_color": {
+          "value": "dark",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "hair_length": {
+          "value": null,
+          "status": "uncertain",
+          "confidence": null
+        },
+        "hair_texture": {
+          "value": null,
+          "status": "uncertain",
+          "confidence": null
+        },
+        "eyewear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "headwear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_garment": {
+          "value": "quilted_jacket",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_color": {
+          "value": "dark_gray",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "orientation": {
+          "value": "front",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "framing": {
+          "value": "upper_body_closeup",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_style": {
+          "value": "pulled_back",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "lower_garment": {
+          "value": null,
+          "status": "not_visible",
+          "confidence": null
+        }
+      },
+      "summary_string": "portrait-v1|hair_color=dark|hair_length=~uncertain|hair_texture=~uncertain|eyewear=none|headwear=none|upper_garment=quilted_jacket|upper_color=dark_gray|orientation=front|framing=upper_body_closeup"
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "type": "numeric_features",
+      "path": "ext/b4a63e2d-d9f0-48e5-ba3f-a2c776cd7821.features.npz"
+    },
+    {
+      "type": "algorithm_metadata",
+      "path": "ext/b4a63e2d-d9f0-48e5-ba3f-a2c776cd7821.features.meta.json"
+    }
+  ],
+  "limitations": [
+    "画面较模糊，不判断精细面部特征。",
+    "束发使头发全长与自然纹理无法可靠判断；下半身未入镜。",
+    "头部与人物区域由 Agent 粗略估计，可能包含少量背景；不是检测器或分割模型的精确定位。",
+    "统计量不保留像素、定位坐标或空间布局，不是人脸生物识别模板，不能用于确认人物身份。",
+    "不同照片中的 p001 均为各自图片内的局部编号，不表示已核验为同一人物。",
+    "外观或图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "Blur limits detail; no fine facial characteristics are assessed.",
+    "The hairstyle obscures full hair length and natural texture; the lower body is outside the frame.",
+    "The head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "The statistics retain no pixels, region coordinates, or spatial layout, are not face biometric templates, and cannot establish identity.",
+    "Each p001 is local to its own image and does not confirm that images depict the same person.",
+    "Appearance and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

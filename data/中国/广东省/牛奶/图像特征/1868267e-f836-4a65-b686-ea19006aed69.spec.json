@@ -1,0 +1,114 @@
+{
+  "schema_version": "image-spec-v2",
+  "asset_id": "1868267e-f836-4a65-b686-ea19006aed69",
+  "category": "portrait",
+  "classification_confidence": 0.9,
+  "processing_status": "completed",
+  "description": "深色头发盘起，佩戴小型浅色发饰，穿浅色短袖上衣和深色碎花短裙。画面为接近全身的背面构图，头部略向侧面转动，双臂靠近栏杆。面部仅局部可见，头发全长无法判断。",
+  "description_en": "Dark hair is worn in an updo with a small light-colored hair accessory. A light-colored short-sleeved top and a dark floral skirt are visible in a nearly full-length rear view, with the head turned slightly to one side and the arms near a railing. The face is only partly visible, and full hair length cannot be determined.",
+  "original_attachment": null,
+  "subject_id_scope": "asset_local",
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "description": "深色头发盘起，佩戴小型浅色发饰，穿浅色短袖上衣和深色碎花短裙。画面为接近全身的背面构图，头部略向侧面转动，双臂靠近栏杆。面部仅局部可见，头发全长无法判断。",
+      "description_en": "Dark hair is worn in an updo with a small light-colored hair accessory. A light-colored short-sleeved top and a dark floral skirt are visible in a nearly full-length rear view, with the head turned slightly to one side and the arms near a railing. The face is only partly visible, and full hair length cannot be determined.",
+      "appearance_attributes": {
+        "hair_color": {
+          "value": "dark",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "hair_length": {
+          "value": null,
+          "status": "uncertain",
+          "confidence": null
+        },
+        "hair_texture": {
+          "value": null,
+          "status": "uncertain",
+          "confidence": null
+        },
+        "eyewear": {
+          "value": null,
+          "status": "not_visible",
+          "confidence": null
+        },
+        "headwear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_garment": {
+          "value": "short_sleeved_top",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_color": {
+          "value": "light",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "orientation": {
+          "value": "rear_with_head_turned",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "framing": {
+          "value": "near_full_body",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_style": {
+          "value": "updo",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_accessory": {
+          "value": "small_light_colored",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "lower_garment": {
+          "value": "floral_skirt",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "lower_color": {
+          "value": "dark_multicolored",
+          "status": "observed",
+          "confidence": 0.75
+        }
+      },
+      "summary_string": "portrait-v1|hair_color=dark|hair_length=~uncertain|hair_texture=~uncertain|eyewear=~not_visible|headwear=none|upper_garment=short_sleeved_top|upper_color=light|orientation=rear_with_head_turned|framing=near_full_body"
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "type": "numeric_features",
+      "path": "ext/1868267e-f836-4a65-b686-ea19006aed69.features.npz"
+    },
+    {
+      "type": "algorithm_metadata",
+      "path": "ext/1868267e-f836-4a65-b686-ea19006aed69.features.meta.json"
+    }
+  ],
+  "limitations": [
+    "面部仅局部可见，不判断精细面部特征或眼镜佩戴情况。",
+    "盘发使头发全长与自然纹理无法可靠判断。",
+    "头部区域原有细节较少；缩放不会增加真实细节。",
+    "头部与人物区域由 Agent 粗略估计，可能包含少量背景；不是检测器或分割模型的精确定位。",
+    "统计量不保留像素、定位坐标或空间布局，不是人脸生物识别模板，不能用于确认人物身份。",
+    "不同照片中的 p001 均为各自图片内的局部编号，不表示已核验为同一人物。",
+    "外观或图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "The face is only partly visible; fine facial characteristics and eyewear are not assessed.",
+    "The updo obscures full hair length and natural texture.",
+    "The head region has limited original detail; resizing does not add real detail.",
+    "The head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "The statistics retain no pixels, region coordinates, or spatial layout, are not face biometric templates, and cannot establish identity.",
+    "Each p001 is local to its own image and does not confirm that images depict the same person.",
+    "Appearance and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

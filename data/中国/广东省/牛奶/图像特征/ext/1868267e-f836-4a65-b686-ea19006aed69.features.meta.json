@@ -1,0 +1,230 @@
+{
+  "asset_id": "1868267e-f836-4a65-b686-ea19006aed69",
+  "feature_profile_version": "portrait-statistics-v1",
+  "preprocessing_version": "preprocess-v1",
+  "purpose": "non_biometric_aggregate_visual_statistics",
+  "biometric_template": false,
+  "preprocessing": {
+    "color_mode": "RGB",
+    "dtype": "uint8",
+    "orientation": "EXIF_display_orientation_only",
+    "longest_edge": 256,
+    "keep_aspect_ratio": true,
+    "padding": false,
+    "resize_interpolation": "INTER_AREA",
+    "gray_conversion": "COLOR_RGB2GRAY",
+    "clahe": {
+      "clipLimit": 2.0,
+      "tileGridSize": [
+        8,
+        8
+      ]
+    }
+  },
+  "libraries": {
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "scikit_image": "0.26.0"
+  },
+  "subject_id_scope": "asset_local",
+  "regions": [
+    {
+      "subject_id": "p001",
+      "region_type": "head",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        221
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__head__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 56576,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 55626,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 54684,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 56576,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 2592795.132013603,
+          "usable_gradient_comparison": true
+        }
+      ]
+    },
+    {
+      "subject_id": "p001",
+      "region_type": "person",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        60
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__person__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 15360,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 14732,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 14112,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 15360,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 2252499.6326545235,
+          "usable_gradient_comparison": true
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "failure_reason": null,
+  "limitations": [
+    "头部与人物区域由 Agent 粗略估计，可能包含少量背景；不是检测器或分割模型的精确定位。",
+    "统计量不保留像素、定位坐标或空间布局，不是人脸生物识别模板，不能用于确认人物身份。",
+    "不同照片中的 p001 均为各自图片内的局部编号，不表示已核验为同一人物。",
+    "外观或图像统计不证明人物记录中的行为、评价或证据等级。"
+  ]
+}
