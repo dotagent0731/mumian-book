@@ -37,8 +37,9 @@ Agent 应将资料用于提示需要核实的行为风险，不得用于识别�
 
 - 项目名称：`木棉书`
 - 本地目录：`木棉书/`
-- 仓库类型：独立的本地 Git 仓库，使用新的提交历史。
-- 远端：未配置。
+- 仓库类型：独立的 Git 仓库，使用新的提交历史。
+- GitHub 仓库：[dotagent0731/mumian-book](https://github.com/dotagent0731/mumian-book)，可见性为私有。
+- 远端：`origin`，对应上述 GitHub 仓库。
 - 默认分支：`main`
 
 ## 目录结构
