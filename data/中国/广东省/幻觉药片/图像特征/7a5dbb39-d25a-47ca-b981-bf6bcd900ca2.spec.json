@@ -1,0 +1,116 @@
+{
+  "schema_version": "image-spec-v2",
+  "asset_id": "7a5dbb39-d25a-47ca-b981-bf6bcd900ca2",
+  "category": "portrait",
+  "classification_confidence": 0.9,
+  "processing_status": "completed",
+  "source_content_type": "photographic_portrait_in_screenshot",
+  "analysis_scope": "foreground_subject_only",
+  "description": "深棕色长发披散，穿浅蓝色针织上衣，一侧可见大圈耳饰，胸前有斜向的深色带状物。画面为接近正面的上半身近景。光线偏暗，下半身未入镜。",
+  "description_en": "Long dark-brown hair is worn loose. A light-blue knitted top, a large hoop earring on one visible side, and a dark diagonal band across the chest are visible in a nearly frontal upper-body close-up. The lighting is dim, and the lower body is outside the frame.",
+  "original_attachment": null,
+  "subject_id_scope": "asset_local",
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "description": "深棕色长发披散，穿浅蓝色针织上衣，一侧可见大圈耳饰，胸前有斜向的深色带状物。画面为接近正面的上半身近景。光线偏暗，下半身未入镜。",
+      "description_en": "Long dark-brown hair is worn loose. A light-blue knitted top, a large hoop earring on one visible side, and a dark diagonal band across the chest are visible in a nearly frontal upper-body close-up. The lighting is dim, and the lower body is outside the frame.",
+      "appearance_attributes": {
+        "hair_color": {
+          "value": "dark_brown",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "hair_length": {
+          "value": "long",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_texture": {
+          "value": "mostly_straight",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "eyewear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "headwear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_garment": {
+          "value": "knitted_top",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_color": {
+          "value": "light_blue",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "orientation": {
+          "value": "near_frontal",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "framing": {
+          "value": "upper_body_closeup",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_style": {
+          "value": "loose",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "ear_accessory": {
+          "value": "large_hoop_visible_one_side",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "diagonal_band": {
+          "value": "dark",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "lower_garment": {
+          "value": null,
+          "status": "not_visible",
+          "confidence": null
+        }
+      },
+      "summary_string": "portrait-v1|hair_color=dark_brown|hair_length=long|hair_texture=mostly_straight|eyewear=none|headwear=none|upper_garment=knitted_top|upper_color=light_blue|orientation=near_frontal|framing=upper_body_closeup"
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "type": "numeric_features",
+      "path": "ext/7a5dbb39-d25a-47ca-b981-bf6bcd900ca2.features.npz"
+    },
+    {
+      "type": "algorithm_metadata",
+      "path": "ext/7a5dbb39-d25a-47ca-b981-bf6bcd900ca2.features.meta.json"
+    }
+  ],
+  "limitations": [
+    "光线偏暗，可能影响发色及衣着颜色判断；下半身未入镜。",
+    "头发和斜向带状物遮挡部分上衣，不能完整判断衣着结构。",
+    "输入为包含照片的手机截图，照片以人物为主体；统计使用避开手机界面和黑边的区域。",
+    "头部和人物区域由 Agent 粗略估计，可能混入背景；没有使用检测器或分割模型。",
+    "统计仅保留有损全局计数或加权和，不保留原图、像素、区域定位坐标或空间布局，不生成生物识别模板。",
+    "各张图的 p001 仅在该图内有效，不表示已经核验跨图人物身份。",
+    "外观描述和图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "Dim lighting may affect judgments of hair and clothing color; the lower body is outside the frame.",
+    "Hair and the diagonal band obscure parts of the top, limiting assessment of its full structure.",
+    "The inputs are mobile screenshots containing photographs centered on a subject. Statistical regions avoid the phone interface and black margins.",
+    "Head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "Only lossy global counts or weighted sums are retained. Original images, pixels, region coordinates, spatial layout, and biometric templates are not stored.",
+    "Each p001 is local to its own image and does not confirm identity across images.",
+    "Appearance descriptions and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

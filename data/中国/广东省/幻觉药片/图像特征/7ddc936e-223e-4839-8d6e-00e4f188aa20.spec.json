@@ -1,0 +1,111 @@
+{
+  "schema_version": "image-spec-v2",
+  "asset_id": "7ddc936e-223e-4839-8d6e-00e4f188aa20",
+  "category": "portrait",
+  "classification_confidence": 0.9,
+  "processing_status": "completed",
+  "source_content_type": "photographic_portrait_in_screenshot",
+  "analysis_scope": "foreground_subject_only",
+  "description": "棕色长发披散，穿灰色绗缝外套，围蓝、黄、红褐色相间的格纹围巾。身体朝侧方，头部转向镜头，画面为上半身构图。围巾遮挡部分颈部和下脸区域，下半身未完整入镜。",
+  "description_en": "Long brown hair is worn loose. A gray quilted coat and a plaid scarf in blue, yellow, and reddish-brown tones are visible. The body faces sideways while the head turns toward the camera in an upper-body view. The scarf partly obscures the neck and lower face, and the lower body is not fully shown.",
+  "original_attachment": null,
+  "subject_id_scope": "asset_local",
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "description": "棕色长发披散，穿灰色绗缝外套，围蓝、黄、红褐色相间的格纹围巾。身体朝侧方，头部转向镜头，画面为上半身构图。围巾遮挡部分颈部和下脸区域，下半身未完整入镜。",
+      "description_en": "Long brown hair is worn loose. A gray quilted coat and a plaid scarf in blue, yellow, and reddish-brown tones are visible. The body faces sideways while the head turns toward the camera in an upper-body view. The scarf partly obscures the neck and lower face, and the lower body is not fully shown.",
+      "appearance_attributes": {
+        "hair_color": {
+          "value": "brown",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "hair_length": {
+          "value": "long",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_texture": {
+          "value": "mostly_straight",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "eyewear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "headwear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_garment": {
+          "value": "quilted_coat",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_color": {
+          "value": "gray",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "orientation": {
+          "value": "side_with_head_turned",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "framing": {
+          "value": "upper_body",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_style": {
+          "value": "loose",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "scarf": {
+          "value": "multicolored_plaid",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "lower_garment": {
+          "value": null,
+          "status": "not_visible",
+          "confidence": null
+        }
+      },
+      "summary_string": "portrait-v1|hair_color=brown|hair_length=long|hair_texture=mostly_straight|eyewear=none|headwear=none|upper_garment=quilted_coat|upper_color=gray|orientation=side_with_head_turned|framing=upper_body"
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "type": "numeric_features",
+      "path": "ext/7ddc936e-223e-4839-8d6e-00e4f188aa20.features.npz"
+    },
+    {
+      "type": "algorithm_metadata",
+      "path": "ext/7ddc936e-223e-4839-8d6e-00e4f188aa20.features.meta.json"
+    }
+  ],
+  "limitations": [
+    "围巾遮挡部分颈部和下脸区域；下半身未完整入镜。",
+    "截图压缩、户外光线及画面中的白色颗粒可能影响颜色和纹理统计。",
+    "输入为包含照片的手机截图，照片以人物为主体；统计使用避开手机界面和黑边的区域。",
+    "头部和人物区域由 Agent 粗略估计，可能混入背景；没有使用检测器或分割模型。",
+    "统计仅保留有损全局计数或加权和，不保留原图、像素、区域定位坐标或空间布局，不生成生物识别模板。",
+    "各张图的 p001 仅在该图内有效，不表示已经核验跨图人物身份。",
+    "外观描述和图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "The scarf partly obscures the neck and lower face; the lower body is not fully visible.",
+    "Screenshot compression, outdoor lighting, and visible white particles may affect color and texture statistics.",
+    "The inputs are mobile screenshots containing photographs centered on a subject. Statistical regions avoid the phone interface and black margins.",
+    "Head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "Only lossy global counts or weighted sums are retained. Original images, pixels, region coordinates, spatial layout, and biometric templates are not stored.",
+    "Each p001 is local to its own image and does not confirm identity across images.",
+    "Appearance descriptions and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

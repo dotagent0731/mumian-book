@@ -1,0 +1,243 @@
+{
+  "asset_id": "53de1106-a65b-4b73-a957-30e781eb6cd1",
+  "feature_profile_version": "portrait-statistics-v1",
+  "preprocessing_version": "preprocess-v1",
+  "purpose": "non_biometric_aggregate_visual_statistics",
+  "biometric_template": false,
+  "preprocessing": {
+    "color_mode": "RGB",
+    "dtype": "uint8",
+    "orientation": "EXIF_display_orientation_only",
+    "longest_edge": 256,
+    "keep_aspect_ratio": true,
+    "padding": false,
+    "resize_interpolation": "INTER_AREA",
+    "gray_conversion": "COLOR_RGB2GRAY",
+    "clahe": {
+      "clipLimit": 2.0,
+      "tileGridSize": [
+        8,
+        8
+      ]
+    }
+  },
+  "libraries": {
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "scikit_image": "0.26.0"
+  },
+  "subject_id_scope": "asset_local",
+  "analysis_scope": "foreground_subject_only",
+  "regions": [
+    {
+      "subject_id": "p001",
+      "region_type": "head",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        206
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__head__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 52736,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 51816,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 50904,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 52736,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 4774644.573478855,
+          "usable_gradient_comparison": true
+        }
+      ]
+    },
+    {
+      "subject_id": "p001",
+      "region_type": "person",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        252
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__person__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 64512,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 63500,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 62496,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 64512,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 7560385.652261779,
+          "usable_gradient_comparison": true
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "failure_reason": null,
+  "limitations": [
+    "下半身未完整入镜；近距离俯视取景可能影响可见比例。",
+    "背景人物不单独提取特征；粗略人物区域边缘可能包含背景衣物，统计存在背景混入。",
+    "输入为包含照片的手机截图，照片以人物为主体；统计使用避开手机界面和黑边的区域。",
+    "头部和人物区域由 Agent 粗略估计，可能混入背景；没有使用检测器或分割模型。",
+    "统计仅保留有损全局计数或加权和，不保留原图、像素、区域定位坐标或空间布局，不生成生物识别模板。",
+    "各张图的 p001 仅在该图内有效，不表示已经核验跨图人物身份。",
+    "外观描述和图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "The lower body is not fully visible; the close, elevated viewpoint may affect apparent proportions.",
+    "Background people are not processed individually. Background clothing may enter the edges of the coarse subject region and affect aggregate statistics.",
+    "The inputs are mobile screenshots containing photographs centered on a subject. Statistical regions avoid the phone interface and black margins.",
+    "Head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "Only lossy global counts or weighted sums are retained. Original images, pixels, region coordinates, spatial layout, and biometric templates are not stored.",
+    "Each p001 is local to its own image and does not confirm identity across images.",
+    "Appearance descriptions and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "asset_id": "7a5dbb39-d25a-47ca-b981-bf6bcd900ca2",
+  "feature_profile_version": "portrait-statistics-v1",
+  "preprocessing_version": "preprocess-v1",
+  "purpose": "non_biometric_aggregate_visual_statistics",
+  "biometric_template": false,
+  "preprocessing": {
+    "color_mode": "RGB",
+    "dtype": "uint8",
+    "orientation": "EXIF_display_orientation_only",
+    "longest_edge": 256,
+    "keep_aspect_ratio": true,
+    "padding": false,
+    "resize_interpolation": "INTER_AREA",
+    "gray_conversion": "COLOR_RGB2GRAY",
+    "clahe": {
+      "clipLimit": 2.0,
+      "tileGridSize": [
+        8,
+        8
+      ]
+    }
+  },
+  "libraries": {
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "scikit_image": "0.26.0"
+  },
+  "subject_id_scope": "asset_local",
+  "analysis_scope": "foreground_subject_only",
+  "regions": [
+    {
+      "subject_id": "p001",
+      "region_type": "head",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        203
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__head__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 51968,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 51054,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 50148,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__head__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 51968,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 1863988.4576477408,
+          "usable_gradient_comparison": true
+        }
+      ]
+    },
+    {
+      "subject_id": "p001",
+      "region_type": "person",
+      "localization_method": "agent_estimated",
+      "status": "completed",
+      "failure_reason": null,
+      "output_region_shape": [
+        256,
+        211
+      ],
+      "statistics_count": 101,
+      "arrays": [
+        {
+          "key": "p001__person__hs_counts",
+          "algorithm": "hsv_hs_joint_histogram",
+          "parameters": {
+            "h_bins": 16,
+            "s_bins": 4,
+            "h_range": [
+              0,
+              180
+            ],
+            "s_range": [
+              0,
+              256
+            ],
+            "flatten_order": "H_then_S"
+          },
+          "shape": [
+            64
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 54016,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p8_r1_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 8,
+            "R": 1,
+            "method": "uniform",
+            "border_excluded": 1
+          },
+          "shape": [
+            10
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 53086,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__lbp_p16_r2_counts",
+          "algorithm": "uniform_lbp_global_histogram",
+          "parameters": {
+            "P": 16,
+            "R": 2,
+            "method": "uniform",
+            "border_excluded": 2
+          },
+          "shape": [
+            18
+          ],
+          "dtype": "uint64",
+          "valid_pixels": 52164,
+          "status": "completed",
+          "failure_reason": null
+        },
+        {
+          "key": "p001__person__sobel_orientation_sums",
+          "algorithm": "sobel_unsigned_orientation_histogram",
+          "parameters": {
+            "kernel_size": 3,
+            "bins": 9,
+            "range_radians": [
+              0.0,
+              3.141592653589793
+            ],
+            "weight": "gradient_magnitude",
+            "border_mode": "BORDER_DEFAULT"
+          },
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "valid_pixels": 54016,
+          "status": "completed",
+          "failure_reason": null,
+          "valid_gradient_magnitude_sum": 2727172.824754446,
+          "usable_gradient_comparison": true
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "failure_reason": null,
+  "limitations": [
+    "光线偏暗，可能影响发色及衣着颜色判断；下半身未入镜。",
+    "头发和斜向带状物遮挡部分上衣，不能完整判断衣着结构。",
+    "输入为包含照片的手机截图，照片以人物为主体；统计使用避开手机界面和黑边的区域。",
+    "头部和人物区域由 Agent 粗略估计，可能混入背景；没有使用检测器或分割模型。",
+    "统计仅保留有损全局计数或加权和，不保留原图、像素、区域定位坐标或空间布局，不生成生物识别模板。",
+    "各张图的 p001 仅在该图内有效，不表示已经核验跨图人物身份。",
+    "外观描述和图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "Dim lighting may affect judgments of hair and clothing color; the lower body is outside the frame.",
+    "Hair and the diagonal band obscure parts of the top, limiting assessment of its full structure.",
+    "The inputs are mobile screenshots containing photographs centered on a subject. Statistical regions avoid the phone interface and black margins.",
+    "Head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "Only lossy global counts or weighted sums are retained. Original images, pixels, region coordinates, spatial layout, and biometric templates are not stored.",
+    "Each p001 is local to its own image and does not confirm identity across images.",
+    "Appearance descriptions and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}

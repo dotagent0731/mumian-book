@@ -1,0 +1,111 @@
+{
+  "schema_version": "image-spec-v2",
+  "asset_id": "53de1106-a65b-4b73-a957-30e781eb6cd1",
+  "category": "portrait",
+  "classification_confidence": 0.9,
+  "processing_status": "completed",
+  "source_content_type": "photographic_portrait_in_screenshot",
+  "analysis_scope": "foreground_subject_only",
+  "description": "棕色长发披散，前额有散落发丝，穿白色镂空针织上衣。人物呈坐姿，一只手在面部旁做 V 形手势，画面为偏俯视的上半身近景。下半身未完整入镜，背景有其他人物。",
+  "description_en": "Long brown hair is worn loose, with strands across the forehead. A white openwork knitted top is visible. The subject is seated and holds one hand beside the face in a V gesture, in an upper-body close-up viewed slightly from above. The lower body is not fully visible, and other people appear in the background.",
+  "original_attachment": null,
+  "subject_id_scope": "asset_local",
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "description": "棕色长发披散，前额有散落发丝，穿白色镂空针织上衣。人物呈坐姿，一只手在面部旁做 V 形手势，画面为偏俯视的上半身近景。下半身未完整入镜，背景有其他人物。",
+      "description_en": "Long brown hair is worn loose, with strands across the forehead. A white openwork knitted top is visible. The subject is seated and holds one hand beside the face in a V gesture, in an upper-body close-up viewed slightly from above. The lower body is not fully visible, and other people appear in the background.",
+      "appearance_attributes": {
+        "hair_color": {
+          "value": "brown",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "hair_length": {
+          "value": "long",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_texture": {
+          "value": "mostly_straight",
+          "status": "observed",
+          "confidence": 0.75
+        },
+        "eyewear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "headwear": {
+          "value": "none",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_garment": {
+          "value": "openwork_knitted_top",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "upper_color": {
+          "value": "white",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "orientation": {
+          "value": "near_frontal",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "framing": {
+          "value": "upper_body_closeup",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "hair_style": {
+          "value": "loose",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "pose": {
+          "value": "seated_with_v_gesture",
+          "status": "observed",
+          "confidence": 0.9
+        },
+        "lower_garment": {
+          "value": null,
+          "status": "not_visible",
+          "confidence": null
+        }
+      },
+      "summary_string": "portrait-v1|hair_color=brown|hair_length=long|hair_texture=mostly_straight|eyewear=none|headwear=none|upper_garment=openwork_knitted_top|upper_color=white|orientation=near_frontal|framing=upper_body_closeup"
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "type": "numeric_features",
+      "path": "ext/53de1106-a65b-4b73-a957-30e781eb6cd1.features.npz"
+    },
+    {
+      "type": "algorithm_metadata",
+      "path": "ext/53de1106-a65b-4b73-a957-30e781eb6cd1.features.meta.json"
+    }
+  ],
+  "limitations": [
+    "下半身未完整入镜；近距离俯视取景可能影响可见比例。",
+    "背景人物不单独提取特征；粗略人物区域边缘可能包含背景衣物，统计存在背景混入。",
+    "输入为包含照片的手机截图，照片以人物为主体；统计使用避开手机界面和黑边的区域。",
+    "头部和人物区域由 Agent 粗略估计，可能混入背景；没有使用检测器或分割模型。",
+    "统计仅保留有损全局计数或加权和，不保留原图、像素、区域定位坐标或空间布局，不生成生物识别模板。",
+    "各张图的 p001 仅在该图内有效，不表示已经核验跨图人物身份。",
+    "外观描述和图像统计不证明人物记录中的行为、评价或证据等级。"
+  ],
+  "limitations_en": [
+    "The lower body is not fully visible; the close, elevated viewpoint may affect apparent proportions.",
+    "Background people are not processed individually. Background clothing may enter the edges of the coarse subject region and affect aggregate statistics.",
+    "The inputs are mobile screenshots containing photographs centered on a subject. Statistical regions avoid the phone interface and black margins.",
+    "Head and visible-person regions are coarse Agent estimates and may include background; no detector or segmentation model was used.",
+    "Only lossy global counts or weighted sums are retained. Original images, pixels, region coordinates, spatial layout, and biometric templates are not stored.",
+    "Each p001 is local to its own image and does not confirm identity across images.",
+    "Appearance descriptions and image statistics do not establish the behavior, evaluations, or evidence grades in the person record."
+  ]
+}
