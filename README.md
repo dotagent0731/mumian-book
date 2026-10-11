@@ -38,9 +38,15 @@ Agent 应将资料用于提示需要核实的行为风险，不得用于识别�
 - 项目名称：`木棉书`
 - 本地目录：`木棉书/`
 - 仓库类型：独立的 Git 仓库，使用新的提交历史。
-- GitHub 仓库：[dotagent0731/mumian-book](https://github.com/dotagent0731/mumian-book)，可见性为私有。
+- GitHub 仓库：[dotagent0731/mumian-book](https://github.com/dotagent0731/mumian-book)，可见性为公开。
 - 远端：`origin`，对应上述 GitHub 仓库。
 - 默认分支：`main`
+
+## 贡献与审核
+
+其他贡献者通过 Fork 提交 PR。PR 应获得至少一位仓库拥有者或管理员的批准，合入时仅使用 squash merge；merge commit 和 rebase merge 均已禁用。
+
+审核人通过 [.github/CODEOWNERS](.github/CODEOWNERS) 指定，当前为仓库拥有者 `@dotagent0731`。新增或移除管理员时，同步维护该文件；审核人名单只包含拥有者和管理员。
 
 ## 目录结构
 
